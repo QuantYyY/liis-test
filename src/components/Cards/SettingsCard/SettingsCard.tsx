@@ -5,45 +5,41 @@ import './SettingsCard.css'
 
 import dayjs from "dayjs";
 
-import { useAppDispatch, useAppSelector } from "../../../hook";
+import { useAppDispatch } from "../../../hook";
 import { getHotelsRequest, updateQuerySettings } from "../../../store/hotelSlice";
 
 const SettingsCard: FC = () => {
 
     const dispatch = useAppDispatch();
-    const settings = useAppSelector(state => state.hotel.settings);
 
     const {
         control,
-        register, 
-        formState: { errors },
+        register,
         handleSubmit
     } = useForm();
 
     const day = dayjs().format('YYYY-MM-DD')
-    
-    const onSubmit = (data: {city: string, date: string, days: number}) => {
-        if(typeof(data.date) === 'string'){
+
+    const onSubmit = (data: { city: string, date: string, days: number }) => {
+        if (typeof (data.date) === 'string') {
             dispatch(updateQuerySettings(data))
             dispatch(getHotelsRequest())
-        } 
+        }
         else {
             data.date = dayjs(data.date).format('YYYY-MM-DD')
             dispatch(updateQuerySettings(data))
             dispatch(getHotelsRequest())
         }
-        
-    } 
+
+    }
 
     useEffect(() => {
         dispatch(getHotelsRequest())
     }, [dispatch]);
 
 
-
     return (
         <>
-
             <form onSubmit={
                 // @ts-ignore
                 handleSubmit(onSubmit)}>
@@ -83,12 +79,11 @@ const SettingsCard: FC = () => {
                 </div>
 
                 <div className="blockSettingsButton">
-                    <Button className="authButton"  htmlType="submit">Найти</Button>
+                    <Button className="authButton" htmlType="submit">Найти</Button>
                 </div>
             </form>
-
         </>
     );
-};  
+};
 
 export default SettingsCard;

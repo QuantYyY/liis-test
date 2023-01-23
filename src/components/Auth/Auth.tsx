@@ -21,7 +21,7 @@ const Auth: FC = () => {
     } = useForm();
 
     const onSubmit = () => {
-        if(isValid){
+        if (isValid) {
             dispatch(updateAuth())
             window.location.href = 'hotels';
         }
@@ -38,7 +38,7 @@ const Auth: FC = () => {
                 <Card className="authCard">
                     <span className="authTitle">{!isAuth && "Simple Hotel Check"}</span>
                     {isAuth &&
-                        <div style={{ marginTop: '100px'}}>
+                        <div style={{ marginTop: '100px' }}>
                             <span className="authTitle">Вы уже авторизованы</span><br />
                             <Link style={{ fontSize: '20px', color: '#41522E' }} to="/hotels">Перейти к отелям</Link>
                         </div>
