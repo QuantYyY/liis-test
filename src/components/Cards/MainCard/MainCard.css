@@ -101,11 +101,12 @@
 
 .arrivalDate{
 	float: right;
-	width: 154px;
+	width: 180px;
 	font-weight: 400;
 	line-height: 28px;
 	display: table-cell; 
 	vertical-align: center;
+	text-align: right;
 }
 
 .headerInfo{

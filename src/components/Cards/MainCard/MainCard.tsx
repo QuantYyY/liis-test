@@ -10,6 +10,8 @@ import ListCard from "./ExtraComponents/ListCard";
 
 import { useAppSelector } from '../../../hook';
 
+dayjs.locale('ru');
+
 const MainCard: FC = () => {
 
     const favouriteHotels = useAppSelector(state => state.hotel.favouriteHotels);
@@ -18,8 +20,8 @@ const MainCard: FC = () => {
     const changeTextSize = () => {
         let textLength = settings.city.length
         let fontSize;
-        if(textLength > 14){
-            fontSize = '20px';
+        if(textLength > 10){
+            fontSize = '22px';
         } else {
             fontSize = '28px'
         }
