@@ -15,7 +15,6 @@ const FavouriteCard: FC = () =>{
     const favouriteHotels = useAppSelector(state => state.hotel.favouriteHotels);
     const conditionStars = useAppSelector(state => state.hotel.conditionStars);
     const conditionPrice = useAppSelector(state => state.hotel.conditionPrice);
-    const settings = useAppSelector(state => state.hotel.settings);
 
     const onClick = (hotel: Hotel) => {
         dispatch(addFavouriteHotel(hotel))

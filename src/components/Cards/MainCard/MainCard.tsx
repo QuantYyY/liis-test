@@ -1,10 +1,10 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import dayjs from "dayjs";
 require('dayjs/locale/ru')
 
 import { List, Avatar, Button } from 'antd';
 import './MainCard.css';
-import Icon, { HomeFilled, HeartOutlined, HeartFilled, RightOutlined, StarFilled } from '@ant-design/icons';
+import Icon, { HomeFilled, HeartFilled, RightOutlined, StarFilled } from '@ant-design/icons';
 import type { CustomIconComponentProps } from '@ant-design/icons/lib/components/Icon';
 import { Carousel } from '@trendyol-js/react-carousel';
 
