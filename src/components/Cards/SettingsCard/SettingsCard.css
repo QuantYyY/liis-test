@@ -1,0 +1,29 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+.settingsLabel{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    color: #424242;
+}
+
+.settingsForm{
+    padding-top: 16px;
+}
+
+.blockSettingsButton{
+    padding-top: 32px;
+}
+
+.settingsButton{
+    width: 100%;
+    height: 50px;
+}
