@@ -9,7 +9,7 @@ const getHotels = async (city: string, date: string, days: number) =>{
     firstDate.setDate(daysToAdd)
     let secondDate =  firstDate.getFullYear() + '-' + String(firstDate.getMonth() + 1).padStart(2, '0') + '-' + String(firstDate.getDate()).padStart(2, '0');
 
-    await axios.get(`http://engine.hotellook.com/api/v2/cache.json?location=${city}&currency=rub&checkIn=${date}&checkOut=${secondDate}&limit=10`)
+    await axios.get(`https://engine.hotellook.com/api/v2/cache.json?location=${city}&currency=rub&checkIn=${date}&checkOut=${secondDate}&limit=10`)
     .then((response) => { 
         request = response.data;
     })
