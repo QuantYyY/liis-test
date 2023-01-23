@@ -1,0 +1,54 @@
+.groupCards{
+    width: 1048px;
+    height: 906px;
+    position: relative;
+    margin-left: auto; 
+    margin-right: auto;
+    top: 92px;
+}
+
+.mainCard{
+    position: absolute;
+    min-width: 664px;
+    min-height: 902px;
+    right: 0;
+}
+
+.settingsCard{
+    position: absolute;
+    min-width: 360px;
+    min-height: 410px;
+    left: 0;
+}
+
+.favouriteCard{
+    position: absolute;
+    min-width: 360px;
+    min-height: 472px;
+    bottom: 0;
+}
+
+body{
+    background-color: #E5E5E5;
+    overflow: hidden;
+}
+
+.projectName{
+    top: 2%;
+    left: 2%;
+    position: absolute;
+    color: #424242;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.exit{
+    top: 2%;
+    right: 3%;
+    position: absolute; 
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #41522E;
+}
