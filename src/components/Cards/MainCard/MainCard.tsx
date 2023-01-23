@@ -26,6 +26,19 @@ const MainCard: FC = () => {
         return result
     }
 
+    const changeTextSize = () => {
+        let textLength = settings.city.length
+        let fontSize;
+        if(textLength > 14){
+            fontSize = '20px';
+        } else {
+            fontSize = '28px'
+        }
+        return fontSize 
+    }
+
+    
+
 
     const onClick = (hotel: Hotel) => {
         dispatch(addFavouriteHotel(hotel))
@@ -58,7 +71,7 @@ const MainCard: FC = () => {
     return (
         <>
             <div className="headerInfo">
-                    <h1 className="hotelCity">Отели <RightOutlined height={17} width={9} style={{ color: '#A7A7A7', fontSize: '22px' }} /> {settings.city}</h1>
+                    <h1 style={{fontSize: `${changeTextSize()}`}} className="hotelCity">Отели <RightOutlined height={17} width={9} style={{ color: '#A7A7A7', fontSize: '22px' }} /> <span className="cityName">{settings.city}</span></h1>
                     <h2 className="arrivalDate"><span style={{ color: '#41522E' }}>{dayjs(settings.date).format('DD MMMM YYYY')}</span></h2>
             </div>
 
