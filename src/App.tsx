@@ -11,8 +11,8 @@ import Auth from './components/Auth';
 const App: FC = () => {
   return (
     <Routes>
-      <Route path='/hotels' element={<GroupCards/>} />
       <Route path='/' element={<Auth/>} />
+      <Route path='/hotels' element={<GroupCards/>} />
     </Routes>
   );
 }
