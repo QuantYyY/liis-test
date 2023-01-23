@@ -36,8 +36,13 @@ const Auth: FC = () => {
 
             <div className="cardPlace">
                 <Card className="authCard">
-                    <span className="authTitle">{isAuth && "Вы уже авторизованы" || "Simple Hotel Check"}</span>
-                    
+                    <span className="authTitle">{!isAuth && "Simple Hotel Check"}</span>
+                    {isAuth &&
+                        <div style={{ marginTop: '100px'}}>
+                            <span className="authTitle">Вы уже авторизованы</span><br />
+                            <Link style={{ fontSize: '20px', color: '#41522E' }} to="/hotels">Перейти к отелям</Link>
+                        </div>
+                    }
                     {!isAuth &&
                         <form className="authForm" onSubmit={handleSubmit(onSubmit)}>
                             <div className="formInputs">
